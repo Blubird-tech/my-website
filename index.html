@@ -1,0 +1,1465 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UMAR AND ELECTRICAL EQUIPEMENTS | Industrial Electrical Systems UAE</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Noto+Sans+Arabic:wght@400;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+	
+        body
+
+		{
+            font-family: 'Inter', 'Noto Sans Arabic', sans-serif;
+            background-color: #0c0d12;
+            color: #d1d5db;
+            scroll-behavior: smooth;
+        }
+
+        .fade-in-up {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+
+        .fade-in-up.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .hamburger-menu-icon {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            width: 24px;
+            height: 18px;
+            cursor: pointer;
+        }
+
+        .hamburger-menu-icon span {
+            display: block;
+            height: 2px;
+            background-color: #1f2937;
+            border-radius: 9999px;
+            transition: transform 0.3s ease, opacity 0.3s ease;
+        }
+
+        .hamburger-menu-icon.active span:nth-child(1) {
+            transform: translateY(8px) rotate(45deg);
+        }
+        .hamburger-menu-icon.active span:nth-child(2) {
+            opacity: 0;
+        }
+        .hamburger-menu-icon.active span:nth-child(3) {
+            transform: translateY(-8px) rotate(-45deg);
+        }
+
+        .btn-primary {
+            background-color: #1f2937;
+            color: white;
+            padding: 0.75rem 2rem;
+            border-radius: 9999px;
+            font-weight: 600;
+            transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+            box-shadow: 0 4px 12px rgba(31, 41, 55, 0.4);
+        }
+        .btn-primary:hover {
+            background-color: #111827;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 16px rgba(31, 41, 55, 0.6);
+        }
+        .btn-secondary {
+            background-color: transparent;
+            color: #1f2937;
+            border: 2px solid #1f2937;
+            padding: 0.75rem 2rem;
+            border-radius: 9999px;
+            font-weight: 600;
+            transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
+        }
+        .btn-secondary:hover {
+            background-color: #1f2937;
+            color: white;
+            transform: translateY(-2px);
+        }
+
+        .project-card, .testimonial-card, .service-card {
+            background-color: #1f2937;
+            padding: 2rem;
+            border-radius: 1rem;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .project-card:hover, .testimonial-card:hover, .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 25px rgba(0, 0, 0, 0.3);
+        }
+
+        .project-media, .team-photo {
+            width: 100%;
+            height: auto;
+            border-radius: 0.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .admin-panel {
+            background-color: #1a202c;
+            border: 2px dashed #4b5563;
+            padding: 2rem;
+            border-radius: 1rem;
+        }
+
+        .emergency-banner {
+            background: linear-gradient(135deg, #dc2626 0%, #991b1b 100%);
+            color: white;
+            padding: 1rem;
+            text-align: center;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.9; }
+        }
+
+        #home {
+            background: linear-gradient(135deg, #ffffff 0%, #f3f4f6 100%);
+        }
+
+        #home h1 {
+            color: #1f2937;
+        }
+
+        #home p {
+            color: #4b5563;
+        }
+
+        .cert-badge {
+            background: white;
+            padding: 1rem;
+            border-radius: 0.5rem;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        .star-rating {
+            color: #fbbf24;
+        }
+
+        .faq-item {
+            border-bottom: 1px solid #374151;
+            padding: 1rem 0;
+        }
+
+        .faq-question {
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+        }
+
+        .faq-answer.active {
+            max-height: 500px;
+            padding-top: 1rem;
+        }
+
+        .chat-widget {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 1000;
+        }
+
+        .chat-button {
+            background: #1f2937;
+            color: white;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+            transition: transform 0.3s ease;
+        }
+
+        .chat-button:hover {
+            transform: scale(1.1);
+        }
+
+        .chat-window {
+            position: fixed;
+            bottom: 90px;
+            right: 20px;
+            width: 350px;
+            height: 500px;
+            background: white;
+            border-radius: 1rem;
+            box-shadow: 0 8px 24px rgba(0,0,0,0.3);
+            display: none;
+            flex-direction: column;
+        }
+
+        .chat-window.active {
+            display: flex;
+        }
+
+        .tab-button {
+            padding: 1rem 2rem;
+            background: transparent;
+            border: none;
+            color: #9ca3af;
+            cursor: pointer;
+            border-bottom: 2px solid transparent;
+            transition: all 0.3s ease;
+        }
+
+        .tab-button.active {
+            color: #1f2937;
+            border-bottom-color: #1f2937;
+        }
+
+        .tab-content {
+            display: none;
+        }
+
+        .tab-content.active {
+            display: block;
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- Emergency Banner -->
+    <div class="emergency-banner">
+        <p class="font-bold">🚨 24/7 EMERGENCY ELECTRICAL SERVICES AVAILABLE | CALL NOW: <a href="tel:+971569353129" class="underline">+971 56 935 3129</a></p>
+    </div>
+
+    <!-- Header & Navigation -->
+    <header class="bg-white/95 backdrop-blur-md sticky top-0 left-0 w-full z-50 transition-all duration-300 shadow-sm">
+        <nav class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <a href="#" class="text-xl font-bold text-gray-900 tracking-wide">UMAR ELECTRICAL</a>
+            <div class="hidden lg:flex items-center space-x-6">
+                <a href="tel:+971569353129" class="flex items-center space-x-2 text-gray-700 hover:text-gray-900">
+                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"/>
+                    </svg>
+                    <span class="font-semibold">+971 56 935 3129</span>
+                </a>
+                <button id="lang-toggle-btn" class="text-gray-700 hover:text-gray-900 transition-colors duration-200 text-sm">العربية</button>
+            </div>
+            <div class="flex items-center space-x-4">
+                <div class="md:hidden">
+                    <button id="mobile-menu-btn" class="hamburger-menu-icon">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                </div>
+                <ul id="main-nav" class="hidden md:flex space-x-6">
+                    <li><a href="#home" class="text-gray-700 hover:text-gray-900">Home</a></li>
+                    <li><a href="#services" class="text-gray-700 hover:text-gray-900">Services</a></li>
+                    <li><a href="#why-us" class="text-gray-700 hover:text-gray-900">Why Us</a></li>
+                    <li><a href="#projects" class="text-gray-700 hover:text-gray-900">Projects</a></li>
+                    <li><a href="#testimonials" class="text-gray-700 hover:text-gray-900">Reviews</a></li>
+                    <li><a href="#blog" class="text-gray-700 hover:text-gray-900">Blog</a></li>
+                    <li><a href="#contact" class="text-gray-700 hover:text-gray-900">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+        <div id="mobile-menu" class="hidden md:hidden bg-white/95 backdrop-blur-md py-4 shadow-lg">
+            <ul class="flex flex-col items-center space-y-4">
+                <li><a href="#home" class="text-lg text-gray-700 hover:text-gray-900">Home</a></li>
+                <li><a href="#services" class="text-lg text-gray-700 hover:text-gray-900">Services</a></li>
+                <li><a href="#why-us" class="text-lg text-gray-700 hover:text-gray-900">Why Us</a></li>
+                <li><a href="#projects" class="text-lg text-gray-700 hover:text-gray-900">Projects</a></li>
+                <li><a href="#testimonials" class="text-lg text-gray-700 hover:text-gray-900">Reviews</a></li>
+                <li><a href="#blog" class="text-lg text-gray-700 hover:text-gray-900">Blog</a></li>
+                <li><a href="#contact" class="text-lg text-gray-700 hover:text-gray-900">Contact</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="relative min-h-screen flex items-center justify-center text-center overflow-hidden py-20">
+            <div class="relative z-10 p-4 max-w-6xl mx-auto">
+                <h1 class="text-4xl sm:text-5xl lg:text-7xl font-extrabold leading-tight mb-4 fade-in-up">Powering Your Industry with Excellence</h1>
+                <p class="text-lg sm:text-xl lg:text-2xl max-w-3xl mx-auto mb-8 fade-in-up" style="transition-delay: 0.3s;">
+                    Certified Industrial Electrical Systems & Project Contracting Across UAE
+                </p>
+                <div class="space-x-4 flex justify-center fade-in-up mb-12" style="transition-delay: 0.6s;">
+                    <a href="#contact" class="btn-primary">Get Free Quote</a>
+                    <a href="#services" class="btn-secondary">Our Services</a>
+                </div>
+
+                <!-- Certifications -->
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mt-12 fade-in-up" style="transition-delay: 0.9s;">
+                    <div class="cert-badge text-center">
+                        <svg class="w-12 h-12 mx-auto mb-2 text-gray-700" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M9 2a1 1 0 000 2h2a1 1 0 100-2H9z"/>
+                            <path fill-rule="evenodd" d="M4 5a2 2 0 012-2 3 3 0 003 3h2a3 3 0 003-3 2 2 0 012 2v11a2 2 0 01-2 2H6a2 2 0 01-2-2V5zm9.707 5.707a1 1 0 00-1.414-1.414L9 12.586l-1.293-1.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"/>
+                        </svg>
+                        <p class="text-sm font-bold text-gray-700">ISO Certified</p>
+                    </div>
+                    <div class="cert-badge text-center">
+                        <svg class="w-12 h-12 mx-auto mb-2 text-gray-700" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"/>
+                        </svg>
+                        <p class="text-sm font-bold text-gray-700">Licensed</p>
+                    </div>
+                    <div class="cert-badge text-center">
+                        <svg class="w-12 h-12 mx-auto mb-2 text-gray-700" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M2.166 4.999A11.954 11.954 0 0010 1.944 11.954 11.954 0 0017.834 5c.11.65.166 1.32.166 2.001 0 5.225-3.34 9.67-8 11.317C5.34 16.67 2 12.225 2 7c0-.682.057-1.35.166-2.001zm11.541 3.708a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"/>
+                        </svg>
+                        <p class="text-sm font-bold text-gray-700">Insured</p>
+                    </div>
+                    <div class="cert-badge text-center">
+                        <svg class="w-12 h-12 mx-auto mb-2 text-gray-700" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                        </svg>
+                        <p class="text-sm font-bold text-gray-700">20+ Years</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Service Area -->
+        <section class="py-12 px-4 bg-gray-800">
+            <div class="container mx-auto text-center">
+                <h3 class="text-2xl font-bold text-white mb-4">Serving Across UAE</h3>
+                <div class="flex flex-wrap justify-center gap-4 text-gray-300">
+                    <span class="px-4 py-2 bg-gray-700 rounded-full">Dubai</span>
+                    <span class="px-4 py-2 bg-gray-700 rounded-full">Ajman</span>
+                    <span class="px-4 py-2 bg-gray-700 rounded-full">Sharjah</span>
+                    <span class="px-4 py-2 bg-gray-700 rounded-full">Abu Dhabi</span>
+                    <span class="px-4 py-2 bg-gray-700 rounded-full">Ras Al Khaimah</span>
+                    <span class="px-4 py-2 bg-gray-700 rounded-full">Fujairah</span>
+                </div>
+                <p class="text-gray-400 mt-6">Emergency Response Time: Under 2 Hours</p>
+            </div>
+        </section>
+		
+
+        <!-- Why Choose Us -->
+        <section id="why-us" class="py-20 px-4">
+            <div class="container mx-auto">
+                <h2 class="text-3xl sm:text-4xl font-bold text-white text-center mb-12">Why Choose UMAR Electrical</h2>
+                
+                
+                
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div class="service-card text-center">
+                        <div class="text-6xl mb-4">⚡</div>
+                        <h3 class="text-xl font-bold text-white mb-2">Fast Response</h3>
+                        <p class="text-gray-400">24/7 emergency services with under 2-hour response time across UAE</p>
+                    </div>
+                    <div class="service-card text-center">
+                        <div class="text-6xl mb-4">🎓</div>
+                        <h3 class="text-xl font-bold text-white mb-2">Certified Experts</h3>
+                        <p class="text-gray-400">All technicians are licensed, certified and undergo continuous training</p>
+                    </div>
+                    <div class="service-card text-center">
+                        <div class="text-6xl mb-4">💯</div>
+                        <h3 class="text-xl font-bold text-white mb-2">Quality Guaranteed</h3>
+                        <p class="text-gray-400">100% satisfaction guarantee with warranty on all work completed</p>
+                    </div>
+                    <div class="service-card text-center">
+                        <div class="text-6xl mb-4">💰</div>
+                        <h3 class="text-xl font-bold text-white mb-2">Competitive Pricing</h3>
+                        <p class="text-gray-400">Transparent pricing with no hidden fees, flexible payment options available</p>
+                    </div>
+                    <div class="service-card text-center">
+                        <div class="text-6xl mb-4">🛡️</div>
+                        <h3 class="text-xl font-bold text-white mb-2">Fully Insured</h3>
+                        <p class="text-gray-400">Comprehensive insurance coverage for your peace of mind</p>
+                    </div>
+                    <div class="service-card text-center">
+                        <div class="text-6xl mb-4">🏆</div>
+                        <h3 class="text-xl font-bold text-white mb-2">Award Winning</h3>
+                        <p class="text-gray-400">Recognized for excellence in industrial electrical services</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Detailed Services Section -->
+        <section id="services" class="py-20 px-4 bg-gray-900">
+            <div class="container mx-auto">
+                <h2 class="text-3xl sm:text-4xl font-bold text-white text-center mb-4">Our Services</h2>
+                <p class="text-gray-400 text-center max-w-2xl mx-auto mb-12">
+                    Comprehensive electrical solutions tailored for industrial, commercial, and residential needs
+                </p>
+
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                    <!-- Service 1 -->
+                    <div class="service-card">
+                        <h3 class="text-2xl font-bold text-white mb-4">🤖 Industrial Automation</h3>
+                        <ul class="space-y-2 text-gray-400 mb-4">
+						<img src="industry.png" alt="Team Member" class="team-photo rounded-full mx-auto mb-4">
+                            <li>✓ PLC Programming & Integration</li>
+                            <li>✓ Custom Control Panel Design</li>
+                            <li>✓ SCADA Systems Implementation</li>
+                            <li>✓ Motor Control Centers</li>
+                            <li>✓ Process Automation</li>
+                        </ul>
+                        <p class="text-sm text-gray-500">Starting from AED 5,000</p>
+                    </div>
+
+                    <!-- Service 2 -->
+                    <div class="service-card">
+                        <h3 class="text-2xl font-bold text-white mb-4">⚡ High Voltage Systems</h3>
+                        <ul class="space-y-2 text-gray-400 mb-4">
+						<img src="voltage.png" alt="Team Member" class="team-photo rounded-full mx-auto mb-4">
+                            <li>✓ Substation Installation & Maintenance</li>
+                            <li>✓ Transformer Services</li>
+                            <li>✓ Circuit Breaker Maintenance</li>
+                            <li>✓ Power Distribution Systems</li>
+                            <li>✓ Safety Compliance Testing</li>
+                        </ul>
+                        <p class="text-sm text-gray-500">Custom quotes available</p>
+                    </div>
+
+                    <!-- Service 3 -->
+                    <div class="service-card">
+                        <h3 class="text-2xl font-bold text-white mb-4">👷 Project Contracting</h3>
+                        <ul class="space-y-2 text-gray-400 mb-4">
+						<img src="project.png" alt="Team Member" class="team-photo rounded-full mx-auto mb-4">
+                            <li>✓ Complete Project Management</li>
+                            <li>✓ Licensed Electrician Teams</li>
+                            <li>✓ Material Procurement</li>
+                            <li>✓ Timeline Guarantee</li>
+                            <li>✓ Post-Project Support</li>
+                        </ul>
+                        <p class="text-sm text-gray-500">Request detailed proposal</p>
+                    </div>
+
+                    <!-- Service 4 -->
+                    <div class="service-card">
+                        <h3 class="text-2xl font-bold text-white mb-4">🔧 Maintenance & Repair</h3>
+                        <ul class="space-y-2 text-gray-400 mb-4">
+						<img src="repair.png" alt="Team Member" class="team-photo rounded-full mx-auto mb-4">
+                            <li>✓ Preventive Maintenance Plans</li>
+                            <li>✓ Emergency Repairs 24/7</li>
+                            <li>✓ Equipment Testing & Inspection</li>
+                            <li>✓ Thermal Imaging Surveys</li>
+                            <li>✓ Annual Maintenance Contracts</li>
+                        </ul>
+                        <p class="text-sm text-gray-500">AMC from AED 2,000/year</p>
+                    </div>
+
+                    <!-- Service 5 -->
+                    <div class="service-card">
+                        <h3 class="text-2xl font-bold text-white mb-4">💡 Energy Solutions</h3>
+                        <ul class="space-y-2 text-gray-400 mb-4">
+						<img src="energy.png" alt="Team Member" class="team-photo rounded-full mx-auto mb-4">
+                            <li>✓ Energy Audits</li>
+                            <li>✓ LED Lighting Upgrades</li>
+                            <li>✓ Power Factor Correction</li>
+                            <li>✓ Solar Integration</li>
+                            <li>✓ Energy Management Systems</li>
+                        </ul>
+                        <p class="text-sm text-gray-500">ROI analysis included</p>
+                    </div>
+
+                    <!-- Service 6 -->
+                    <div class="service-card">
+                        <h3 class="text-2xl font-bold text-white mb-4">📋 Design & Consulting</h3>
+                        <ul class="space-y-2 text-gray-400 mb-4">
+						<img src="design.png" alt="Team Member" class="team-photo rounded-full mx-auto mb-4">
+                            <li>✓ Electrical System Design</li>
+                            <li>✓ Load Calculations</li>
+                            <li>✓ Compliance Consulting</li>
+                            <li>✓ Safety Audits</li>
+                            <li>✓ Retrofit Planning</li>
+                        </ul>
+                        <p class="text-sm text-gray-500">Free initial consultation</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="py-20 px-4">
+            <div class="container mx-auto">
+                <h2 class="text-3xl sm:text-4xl font-bold text-white text-center mb-4">Completed Projects</h2>
+                <p class="text-gray-400 text-center max-w-2xl mx-auto mb-8">
+                    Showcasing our expertise across diverse industrial electrical projects
+                </p>
+
+                <!-- Project Filter -->
+                <div class="flex justify-center mb-8 space-x-4">
+                    <button class="tab-button active" data-category="all">All Projects</button>
+                    <button class="tab-button" data-category="industrial">Industrial</button>
+                    <button class="tab-button" data-category="commercial">Commercial</button>
+                    <button class="tab-button" data-category="residential">Residential</button>
+                </div>
+
+                <div id="project-showcase" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+                    <!-- Projects will be added here -->
+                </div>
+
+                <div class="text-center">
+                    <button id="toggle-admin-btn" class="btn-secondary">Manage Projects</button>
+                </div>
+
+                <!-- Admin Panel -->
+                <div id="password-prompt" class="hidden mt-12 text-center">
+    <h3 class="text-2xl font-bold text-white mb-6">Enter Admin Key</h3>
+    <input type="password" id="admin-key-input" placeholder="Admin Key" class="w-full max-w-sm p-3 rounded-lg bg-gray-700 border border-gray-600 text-gray-200 mb-4" required>
+    <button id="admin-key-submit" class="btn-primary">Access Panel</button>
+    <p id="key-error-message" class="text-red-500 mt-2 hidden">Incorrect Key. Access Denied.</p>
+</div>
+
+<div id="admin-panel" class="hidden mt-12 admin-panel">
+    </div>
+
+<div id="password-prompt" class="hidden mt-12 text-center">
+    <h3 class="text-2xl font-bold text-white mb-6">Enter Admin Key</h3>
+    <input type="password" id="admin-key-input" placeholder="Admin Key" class="w-full max-w-sm p-3 rounded-lg bg-gray-700 border border-gray-600 text-gray-200 mb-4" required>
+    <button id="admin-key-submit" class="btn-primary">Access Panel</button>
+    <p id="key-error-message" class="text-red-500 mt-2 hidden">Incorrect Key. Access Denied.</p>
+</div>
+
+<div id="admin-panel" class="hidden mt-12 admin-panel">
+    <h3 class="text-2xl font-bold text-white mb-6">Project Admin Panel</h3>
+    </div>
+            </div>
+        </section>
+
+        <!-- Team Section -->
+        <section id="team" class="py-20 px-4 bg-gray-900">
+            <div class="container mx-auto">
+                <h2 class="text-3xl sm:text-4xl font-bold text-white text-center mb-12">Management Team</h2>
+                <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                    <div class="text-center">
+                        <img src="Umar.jpeg" alt="Team Member" class="team-photo rounded-full mx-auto mb-4">
+                        <h3 class="text-xl font-bold text-white">Umar Farooq</h3>
+                        <p class="text-gray-400">CEO</p>
+                        <p class="text-sm text-gray-500 mt-2">20+ Years Experience</p>
+                    </div>
+                    <div class="text-center">
+                        <img src="Amjad2.png" alt="Team Member" class="team-photo rounded-full mx-auto mb-4">
+                        <h3 class="text-xl font-bold text-white">Mohammed Amjad</h3>
+                        <p class="text-gray-400">Director</p>
+                        <p class="text-sm text-gray-500 mt-2">30+ Years Experience</p>
+                    </div>
+					 <div class="text-center">
+                        <img src="Mazhar.jpeg" alt="Team Member" class="team-photo rounded-full mx-auto mb-4">
+                        <h3 class="text-xl font-bold text-white">Mazhar Khalil</h3>
+                        <p class="text-gray-400">Senior Electrician</p>
+                        <p class="text-sm text-gray-500 mt-2">12+ Years Experience</p>
+                    </div>
+                    <div class="text-center">
+                        <img src="Moon.jpeg" alt="Team Member" class="team-photo rounded-full mx-auto mb-4">
+                        <h3 class="text-xl font-bold text-white">Talha Mehmood</h3>
+                        <p class="text-gray-400">Junior Electrician</p>
+                        <p class="text-sm text-gray-500 mt-2">10+ Years Experience</p>
+                    </div>
+                    <div class="text-center">
+                        <img src="Furqan.jpeg" alt="Team Member" class="team-photo rounded-full mx-auto mb-4">
+                        <h3 class="text-xl font-bold text-white">Furqan Abid</h3>
+                        <p class="text-gray-400">Junior Electrician</p>
+                        <p class="text-sm text-gray-500 mt-2">6+ Years Experience</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials -->
+        <section id="testimonials" class="py-20 px-4">
+            <div class="container mx-auto">
+                <h2 class="text-3xl sm:text-4xl font-bold text-white text-center mb-4">Client Testimonials</h2>
+                <p class="text-gray-400 text-center max-w-2xl mx-auto mb-12">
+                    Don't just take our word for it - hear from our satisfied clients
+                </p>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12" id="testimonials-showcase">
+                    <!-- Testimonials will be added here -->
+                </div>
+                <div class="text-center">
+                    <button id="toggle-testimonial-admin-btn" class="btn-secondary">Manage Testimonials</button>
+                </div>
+
+                <!-- Testimonial Admin Panel -->
+                <div id="testimonial-admin-panel" class="hidden mt-12 admin-panel">
+                    <h3 class="text-2xl font-bold text-white mb-6">Testimonial Admin Panel</h3>
+                    <form id="add-testimonial-form" class="space-y-4 mb-8">
+                        <input type="text" id="testimonial-name-input" placeholder="Client Name" class="w-full p-3 rounded-lg bg-gray-700 border border-gray-600 text-gray-200" required>
+                        <input type="text" id="testimonial-company-input" placeholder="Company Name" class="w-full p-3 rounded-lg bg-gray-700 border border-gray-600 text-gray-200">
+                        <select id="testimonial-rating-input" class="w-full p-3 rounded-lg bg-gray-700 border border-gray-600 text-gray-200" required>
+                            <option value="">Select Rating</option>
+                            <option value="5">5 Stars</option>
+                            <option value="4">4 Stars</option>
+                            <option value="3">3 Stars</option>
+                        </select>
+                        <textarea id="testimonial-text-input" rows="3" placeholder="Testimonial Text" class="w-full p-3 rounded-lg bg-gray-700 border border-gray-600 text-gray-200" required></textarea>
+                        <button type="submit" class="btn-primary">Add Testimonial</button>
+                    </form>
+                    <h4 class="text-xl font-bold text-white mb-4">Current Testimonials:</h4>
+                    <ul id="testimonial-admin-list" class="space-y-3"></ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section id="faq" class="py-20 px-4 bg-gray-900">
+            <div class="container mx-auto max-w-4xl">
+                <h2 class="text-3xl sm:text-4xl font-bold text-white text-center mb-12">Frequently Asked Questions</h2>
+                <div class="space-y-4">
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h3 class="text-lg font-bold text-white">What areas do you serve in UAE?</h3>
+                            <span class="text-white text-2xl">+</span>
+                        </div>
+                        <div class="faq-answer text-gray-400">
+                            We serve all major emirates including Dubai, Abu Dhabi, Sharjah, Ajman, Ras Al Khaimah, Fujairah, and Umm Al Quwain with emergency response available 24/7.
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h3 class="text-lg font-bold text-white">Do you offer emergency services?</h3>
+                            <span class="text-white text-2xl">+</span>
+                        </div>
+                        <div class="faq-answer text-gray-400">
+                            Yes, we provide 24/7 emergency electrical services with response times under 2 hours. Call us immediately at +971 56 935 3129 for urgent assistance.
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h3 class="text-lg font-bold text-white">Are your electricians certified and licensed?</h3>
+                            <span class="text-white text-2xl">+</span>
+                        </div>
+                        <div class="faq-answer text-gray-400">
+                            All our electricians are fully licensed, certified, and insured. They undergo continuous training to stay updated with the latest electrical codes and safety standards.
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h3 class="text-lg font-bold text-white">Do you provide free quotes?</h3>
+                            <span class="text-white text-2xl">+</span>
+                        </div>
+                        <div class="faq-answer text-gray-400">
+                            Yes, we offer free, no-obligation quotes for all projects. Contact us through our website, WhatsApp, or call directly to schedule an assessment.
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h3 class="text-lg font-bold text-white">What payment methods do you accept?</h3>
+                            <span class="text-white text-2xl">+</span>
+                        </div>
+                        <div class="faq-answer text-gray-400">
+                            We accept cash, bank transfers, credit/debit cards, and offer flexible payment plans for larger projects. Ask about our financing options.
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h3 class="text-lg font-bold text-white">Do you offer warranties on your work?</h3>
+                            <span class="text-white text-2xl">+</span>
+                        </div>
+                        <div class="faq-answer text-gray-400">
+                            Yes, all our work comes with a comprehensive warranty. The duration varies by project type - contact us for specific warranty details for your project.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Blog Section -->
+        <section id="blog" class="py-20 px-4">
+            <div class="container mx-auto">
+                <h2 class="text-3xl sm:text-4xl font-bold text-white text-center mb-4">Latest from Our Blog</h2>
+                <p class="text-gray-400 text-center max-w-2xl mx-auto mb-12">
+                    Expert insights, tips, and industry updates
+                </p>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8" id="blog-showcase">
+                    <!-- Blog posts will be added here -->
+                </div>
+                <div class="text-center mt-12">
+                    <button id="toggle-blog-admin-btn" class="btn-secondary">Manage Blog Posts</button>
+                </div>
+
+                <!-- Blog Admin Panel -->
+                <div id="blog-admin-panel" class="hidden mt-12 admin-panel">
+                    <h3 class="text-2xl font-bold text-white mb-6">Blog Admin Panel</h3>
+                    <form id="add-blog-form" class="space-y-4 mb-8">
+                        <input type="text" id="blog-title-input" placeholder="Blog Title" class="w-full p-3 rounded-lg bg-gray-700 border border-gray-600 text-gray-200" required>
+                        <input type="text" id="blog-image-input" placeholder="Featured Image URL" class="w-full p-3 rounded-lg bg-gray-700 border border-gray-600 text-gray-200">
+                        <textarea id="blog-excerpt-input" rows="2" placeholder="Short Excerpt" class="w-full p-3 rounded-lg bg-gray-700 border border-gray-600 text-gray-200" required></textarea>
+                        <textarea id="blog-content-input" rows="5" placeholder="Full Content" class="w-full p-3 rounded-lg bg-gray-700 border border-gray-600 text-gray-200" required></textarea>
+                        <button type="submit" class="btn-primary">Add Blog Post</button>
+                    </form>
+                    <h4 class="text-xl font-bold text-white mb-4">Current Blog Posts:</h4>
+                    <ul id="blog-admin-list" class="space-y-3"></ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Online Booking System -->
+        <section id="booking" class="py-20 px-4 bg-gray-900">
+            <div class="container mx-auto max-w-2xl">
+                <h2 class="text-3xl sm:text-4xl font-bold text-white text-center mb-4">Book a Service</h2>
+                <p class="text-gray-400 text-center mb-12">
+                    Schedule your electrical service online - we'll confirm within 2 hours
+                </p>
+                <form id="booking-form" class="space-y-6 bg-gray-800 p-8 rounded-2xl">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <input type="text" id="booking-name" placeholder="Your Name" class="p-3 rounded-lg bg-gray-700 border border-gray-600 text-gray-200" required>
+                        <input type="tel" id="booking-phone" placeholder="Phone Number" class="p-3 rounded-lg bg-gray-700 border border-gray-600 text-gray-200" required>
+                    </div>
+                    <input type="email" id="booking-email" placeholder="Email Address" class="w-full p-3 rounded-lg bg-gray-700 border border-gray-600 text-gray-200" required>
+                    <select id="booking-service" class="w-full p-3 rounded-lg bg-gray-700 border border-gray-600 text-gray-200" required>
+                        <option value="">Select Service Type</option>
+                        <option value="industrial">Industrial Automation</option>
+                        <option value="highvoltage">High Voltage Systems</option>
+                        <option value="contracting">Project Contracting</option>
+                        <option value="maintenance">Maintenance & Repair</option>
+                        <option value="energy">Energy Solutions</option>
+                        <option value="consulting">Design & Consulting</option>
+                    </select>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <input type="date" id="booking-date" class="p-3 rounded-lg bg-gray-700 border border-gray-600 text-gray-200" required>
+                        <select id="booking-time" class="p-3 rounded-lg bg-gray-700 border border-gray-600 text-gray-200" required>
+                            <option value="">Preferred Time</option>
+                            <option value="morning">Morning (8AM-12PM)</option>
+                            <option value="afternoon">Afternoon (12PM-4PM)</option>
+                            <option value="evening">Evening (4PM-8PM)</option>
+                        </select>
+                    </div>
+                    <textarea id="booking-message" rows="4" placeholder="Describe your requirements" class="w-full p-3 rounded-lg bg-gray-700 border border-gray-600 text-gray-200"></textarea>
+                    <button type="submit" class="btn-primary w-full">Book Now</button>
+                </form>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="py-20 px-4">
+            <div class="container mx-auto">
+                <h2 class="text-3xl sm:text-4xl font-bold text-white text-center mb-4">Contact Us</h2>
+                <p class="text-gray-400 text-center max-w-2xl mx-auto mb-12">
+                    Multiple ways to reach us - choose what works best for you
+                </p>
+                
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+                    <div class="text-center">
+                        <div class="bg-gray-800 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"/>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-2">Call Us</h3>
+                        <a href="tel:+971569353129" class="text-gray-400 hover:text-white">+971 56 935 3129</a>
+                        <p class="text-sm text-gray-500 mt-2">24/7 Available</p>
+                    </div>
+                    <div class="text-center">
+                        <div class="bg-gray-800 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"/>
+                                <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"/>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-2">Email Us</h3>
+                        <a href="mailto:omarfarooqpp@gmail.com" class="text-gray-400 hover:text-white">omarfarooqpp@gmail.com</a>
+                        <p class="text-sm text-gray-500 mt-2">Response within 24hrs</p>
+                    </div>
+                    <div class="text-center">
+                        <div class="bg-gray-800 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z"/>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-2">Visit Us</h3>
+                        <p class="text-gray-400">New Industrial Area</p>
+                        <p class="text-gray-400">Ajman, UAE</p>
+                    </div>
+                </div>
+
+                <div class="flex justify-center space-x-4 mb-12">
+                    <a href="https://wa.me/971569353129?text=Hello%20UMAR%20ELECTRICAL" target="_blank" class="btn-primary flex items-center space-x-2">
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+                        </svg>
+                        <span>WhatsApp</span>
+                    </a>
+                </div>
+
+                <div class="max-w-xl mx-auto bg-gray-800 p-8 rounded-2xl">
+                    <p class="text-gray-400 mb-6 text-center">Send us a message:</p>
+                    <form id="contact-form" class="space-y-6">
+                        <input type="text" id="contact-name" placeholder="Your Name" class="w-full p-3 rounded-lg bg-gray-700 border border-gray-600 text-gray-200" required>
+                        <input type="email" id="contact-email" placeholder="Your Email" class="w-full p-3 rounded-lg bg-gray-700 border border-gray-600 text-gray-200" required>
+                        <textarea id="contact-message" rows="4" placeholder="Your Message" class="w-full p-3 rounded-lg bg-gray-700 border border-gray-600 text-gray-200" required></textarea>
+                        <button type="submit" class="btn-primary w-full">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 py-12 px-4">
+        <div class="container mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <h3 class="text-white font-bold text-lg mb-4">UMAR ELECTRICAL</h3>
+                    <p class="text-gray-400 text-sm">Your trusted partner for industrial electrical solutions across UAE.</p>
+                </div>
+                <div>
+                    <h4 class="text-white font-bold mb-4">Quick Links</h4>
+                    <ul class="space-y-2 text-gray-400 text-sm">
+                        <li><a href="#services" class="hover:text-white">Services</a></li>
+                        <li><a href="#projects" class="hover:text-white">Projects</a></li>
+                        <li><a href="#blog" class="hover:text-white">Blog</a></li>
+                        <li><a href="#contact" class="hover:text-white">Contact</a></li>
+                        <li><button onclick="document.getElementById('settings-panel').classList.remove('hidden'); document.getElementById('settings-panel').scrollIntoView({behavior: 'smooth'});" class="hover:text-white text-left">⚙️ Website Settings</button></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white font-bold mb-4">Services</h4>
+                    <ul class="space-y-2 text-gray-400 text-sm">
+                        <li>Industrial Automation</li>
+                        <li>High Voltage Systems</li>
+                        <li>Project Contracting</li>
+                        <li>Maintenance</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white font-bold mb-4">Contact</h4>
+                    <ul class="space-y-2 text-gray-400 text-sm">
+                        <li>+971 56 935 3129</li>
+                        <li>omarfarooqpp@gmail.com</li>
+                        <li>New Industrial Area, Ajman, UAE</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 pt-8 text-center text-gray-500 text-sm">
+                <p>&copy; 2024 UMAR AND ELECTRICAL EQUIPEMENTS. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Live Chat Widget -->
+    <div class="chat-widget">
+        <div class="chat-button" id="chat-toggle">
+            <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M18 10c0 3.866-3.582 7-8 7a8.841 8.841 0 01-4.083-.98L2 17l1.338-3.123C2.493 12.767 2 11.434 2 10c0-3.866 3.582-7 8-7s8 3.134 8 7zM7 9H5v2h2V9zm8 0h-2v2h2V9zM9 9h2v2H9V9z"/>
+            </svg>
+        </div>
+        <div class="chat-window" id="chat-window">
+            <div class="bg-gray-800 p-4 rounded-t-xl">
+                <h3 class="text-white font-bold">Chat with Us</h3>
+                <p class="text-gray-400 text-sm">We typically reply within minutes</p>
+            </div>
+            <div class="flex-1 p-4 overflow-y-auto bg-gray-100">
+                <div class="bg-white p-3 rounded-lg shadow mb-3">
+                    <p class="text-gray-800 text-sm">Hi! How can we help you today?</p>
+                </div>
+            </div>
+            <div class="p-4 bg-white rounded-b-xl">
+                <input type="text" id="chat-input" placeholder="Type your message..." class="w-full p-2 border border-gray-300 rounded-lg text-gray-800" />
+                <button class="btn-primary w-full mt-2">Send</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Initialize data
+            let projects = JSON.parse(localStorage.getItem('umar_projects') || '[]');
+            let testimonials = JSON.parse(localStorage.getItem('umar_testimonials') || '[]');
+            let blogPosts = JSON.parse(localStorage.getItem('umar_blog') || '[]');
+            let currentProjectFilter = 'all';
+            let currentLang = localStorage.getItem('umar_lang') || 'en';
+            let heroImage = localStorage.getItem('umar_hero_image') || '';
+            let aboutVideo = localStorage.getItem('umar_about_video') || '';
+
+            // Language translations
+            const translations = {
+                en: {
+                    emergency: "🚨 24/7 EMERGENCY ELECTRICAL SERVICES AVAILABLE | CALL NOW:",
+                    home: "Home",
+                    services: "Services",
+                    whyUs: "Why Us",
+                    projects: "Projects",
+                    reviews: "Reviews",
+                    blog: "Blog",
+                    contact: "Contact",
+                    heroTitle: "Powering Your Industry with Excellence",
+                    heroSubtitle: "Certified Industrial Electrical Systems & Project Contracting Across UAE",
+                    getQuote: "Get Free Quote",
+                    ourServices: "Our Services"
+                },
+                ar: {
+                    emergency: "🚨 خدمات الطوارئ الكهربائية متاحة 24/7 | اتصل الآن:",
+                    home: "الرئيسية",
+                    services: "الخدمات",
+                    whyUs: "لماذا نحن",
+                    projects: "المشاريع",
+                    reviews: "التقييمات",
+                    blog: "المدونة",
+                    contact: "اتصل بنا",
+                    heroTitle: "نمد صناعتك بالتميز",
+                    heroSubtitle: "أنظمة كهربائية صناعية معتمدة ومقاولات مشاريع في جميع أنحاء الإمارات",
+                    getQuote: "احصل على عرض مجاني",
+                    ourServices: "خدماتنا"
+                }
+            };
+
+            // Apply translations
+            const applyTranslations = () => {
+                const t = translations[currentLang];
+                document.querySelector('.emergency-banner p').innerHTML = `${t.emergency} <a href="tel:+971569353129" class="underline">+971 56 935 3129</a>`;
+                document.querySelectorAll('a[href="#home"]').forEach(el => el.textContent = t.home);
+                document.querySelectorAll('a[href="#services"]').forEach(el => el.textContent = t.services);
+                document.querySelectorAll('a[href="#why-us"]').forEach(el => el.textContent = t.whyUs);
+                document.querySelectorAll('a[href="#projects"]').forEach(el => el.textContent = t.projects);
+                document.querySelectorAll('a[href="#testimonials"]').forEach(el => el.textContent = t.reviews);
+                document.querySelectorAll('a[href="#blog"]').forEach(el => el.textContent = t.blog);
+                document.querySelectorAll('a[href="#contact"]').forEach(el => el.textContent = t.contact);
+                
+                const heroTitle = document.querySelector('#home h1');
+                const heroSubtitle = document.querySelector('#home p');
+                if (heroTitle) heroTitle.textContent = t.heroTitle;
+                if (heroSubtitle) heroSubtitle.textContent = t.heroSubtitle;
+                
+                const quoteBtn = document.querySelector('a[href="#contact"].btn-primary');
+                const servicesBtn = document.querySelector('a[href="#services"].btn-secondary');
+                if (quoteBtn) quoteBtn.textContent = t.getQuote;
+                if (servicesBtn) servicesBtn.textContent = t.ourServices;
+                
+                document.getElementById('lang-toggle-btn').textContent = currentLang === 'en' ? 'العربية' : 'English';
+                document.body.style.direction = currentLang === 'ar' ? 'rtl' : 'ltr';
+            };
+
+            // Language toggle
+            document.getElementById('lang-toggle-btn')?.addEventListener('click', () => {
+                currentLang = currentLang === 'en' ? 'ar' : 'en';
+                localStorage.setItem('umar_lang', currentLang);
+                applyTranslations();
+            });
+
+            // Apply hero image if exists
+            const applyHeroImage = () => {
+                const heroSection = document.getElementById('home');
+                if (heroImage && heroSection) {
+                    heroSection.style.backgroundImage = `linear-gradient(rgba(255,255,255,0.9), rgba(243,244,246,0.9)), url(${heroImage})`;
+                    heroSection.style.backgroundSize = 'cover';
+                    heroSection.style.backgroundPosition = 'center';
+                }
+            };
+
+            // Apply about video if exists
+            const applyAboutVideo = () => {
+                const videoContainer = document.getElementById('about-video-container');
+                if (aboutVideo && videoContainer) {
+                    videoContainer.innerHTML = `
+                        <video controls class="w-full rounded-xl shadow-2xl" style="max-height: 500px;">
+                            <source src="${aboutVideo}" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    `;
+                }
+            };
+
+            // Mobile menu toggle
+            const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+            const mobileMenu = document.getElementById('mobile-menu');
+            mobileMenuBtn?.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+                mobileMenuBtn.classList.toggle('active');
+            });
+
+            // Smooth scrolling
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                        mobileMenu?.classList.add('hidden');
+                        mobileMenuBtn?.classList.remove('active');
+                    }
+                });
+            });
+
+            // Fade-in animation
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            document.querySelectorAll('.fade-in-up').forEach(el => observer.observe(el));
+
+            // FAQ Toggle
+            document.querySelectorAll('.faq-question').forEach(question => {
+                question.addEventListener('click', () => {
+                    const answer = question.nextElementSibling;
+                    const icon = question.querySelector('span');
+                    answer.classList.toggle('active');
+                    icon.textContent = answer.classList.contains('active') ? '-' : '+';
+                });
+            });
+
+            // Chat Widget
+            const chatToggle = document.getElementById('chat-toggle');
+            const chatWindow = document.getElementById('chat-window');
+            chatToggle?.addEventListener('click', () => {
+                chatWindow.classList.toggle('active');
+            });
+
+            // Project Management
+            const renderProjects = () => {
+                const showcase = document.getElementById('project-showcase');
+                const adminList = document.getElementById('project-admin-list');
+                
+                const filtered = currentProjectFilter === 'all' ? projects : projects.filter(p => p.category === currentProjectFilter);
+                
+                showcase.innerHTML = filtered.length ? '' : '<p class="text-gray-400 col-span-full">No projects to display</p>';
+                filtered.forEach((project, index) => {
+                    const card = document.createElement('div');
+                    card.className = 'project-card';
+                    card.innerHTML = `
+                        ${project.mediaUrl ? `<img src="${project.mediaUrl}" alt="${project.title}" class="project-media">` : ''}
+                        <div class="text-xs text-gray-500 mb-2">${project.category?.toUpperCase() || 'PROJECT'} ${project.location ? '• ' + project.location : ''}</div>
+                        <h3 class="text-xl font-bold text-white mb-2">${project.title}</h3>
+                        <p class="text-gray-400 mb-3">${project.description}</p>
+                        ${project.client ? `<p class="text-sm text-gray-500">Client: ${project.client}</p>` : ''}
+                        ${project.date ? `<p class="text-sm text-gray-500">Completed: ${project.date}</p>` : ''}
+                    `;
+                    showcase.appendChild(card);
+                });
+
+                adminList.innerHTML = '';
+                projects.forEach((project, index) => {
+                    const li = document.createElement('li');
+                    li.className = 'flex justify-between items-center bg-gray-700 p-3 rounded';
+                    li.innerHTML = `
+                        <span class="text-white">${project.title}</span>
+                        <button class="text-red-500 hover:text-red-700" onclick="deleteProject(${index})">Delete</button>
+                    `;
+                    adminList.appendChild(li);
+                });
+            };
+
+            window.deleteProject = (index) => {
+                projects.splice(index, 1);
+                localStorage.setItem('umar_projects', JSON.stringify(projects));
+                renderProjects();
+            };
+
+            // Project Filter
+            document.querySelectorAll('.tab-button').forEach(btn => {
+                btn.addEventListener('click', () => {
+                    document.querySelectorAll('.tab-button').forEach(b => b.classList.remove('active'));
+                    btn.classList.add('active');
+                    currentProjectFilter = btn.dataset.category;
+                    renderProjects();
+                });
+            });
+
+            // Add Project Form
+            document.getElementById('add-project-form')?.addEventListener('submit', (e) => {
+                e.preventDefault();
+                projects.push({
+                    title: document.getElementById('project-title-input').value,
+                    category: document.getElementById('project-category-input').value,
+                    location: document.getElementById('project-location-input').value,
+                    mediaUrl: document.getElementById('project-media-url-input').value,
+                    description: document.getElementById('project-description-input').value,
+                    client: document.getElementById('project-client-input').value,
+                    date: document.getElementById('project-date-input').value
+                });
+                localStorage.setItem('umar_projects', JSON.stringify(projects));
+                e.target.reset();
+                renderProjects();
+            });
+			document.addEventListener('DOMContentLoaded', () => {
+    // 🔑 Set your SECRET KEY for unlocking the panel here
+    const ADMIN_PASSCODE = "YourSecretKey123"; 
+    // REMINDER: CHANGE THIS to a strong, unique key/password.
+
+    // Elements
+    const adminPanel = document.getElementById('admin-panel');
+    const passwordPrompt = document.getElementById('password-prompt');
+    const adminKeyInput = document.getElementById('admin-key-input');
+    const adminKeySubmit = document.getElementById('admin-key-submit');
+    const keyErrorMessage = document.getElementById('key-error-message');
+
+    // --- Part A: Secret Keyboard Trigger Logic (NEW SHORTCUT: Ctrl + Shift + 1) ---
+    // The new secret shortcut to reveal the password prompt is Ctrl + Shift + 1
+    const SECRET_KEY_CODE = 'Digit1'; // The '1' key (not the numpad 1)
+    
+    document.addEventListener('keydown', (e) => {
+        // Check for the specific combination: 
+        // 1. Ctrl key (or Cmd key on Mac) is pressed
+        // 2. Shift key is pressed
+        // 3. The code matches the '1' key
+        if ((e.ctrlKey || e.metaKey) && e.shiftKey && e.code === SECRET_KEY_CODE) {
+            e.preventDefault(); // Stop default browser actions
+            
+            // Toggle the visibility of the password prompt
+            if (passwordPrompt.classList.contains('hidden')) {
+                // If hidden, show it and focus input
+                passwordPrompt.classList.remove('hidden');
+                adminKeyInput.focus();
+            } else {
+                // If visible, hide it
+                passwordPrompt.classList.add('hidden');
+            }
+        }
+    });
+
+    // --- Part B: Password Check Logic ---
+    const checkAdminKey = () => {
+        const enteredKey = adminKeyInput.value.trim();
+
+        if (enteredKey === ADMIN_PASSCODE) {
+            // Key is correct: Hide prompt, Show panel
+            passwordPrompt.classList.add('hidden');
+            adminPanel.classList.remove('hidden');
+            keyErrorMessage.classList.add('hidden');
+            alert("Admin Panel Unlocked!");
+
+        } else {
+            // Key is incorrect: Show error
+            keyErrorMessage.classList.remove('hidden');
+            adminKeyInput.value = ''; 
+            adminKeyInput.focus(); 
+        }
+    };
+
+    // Attach event listeners for click and Enter key on the password field
+    adminKeySubmit.addEventListener('click', checkAdminKey);
+    adminKeyInput.addEventListener('keydown', (event) => {
+        if (event.key === 'Enter') {
+            event.preventDefault(); 
+            checkAdminKey();
+        }
+    });
+});
+
+            // Testimonial Management
+            const renderTestimonials = () => {
+                const showcase = document.getElementById('testimonials-showcase');
+                const adminList = document.getElementById('testimonial-admin-list');
+                
+                showcase.innerHTML = testimonials.length ? '' : '<p class="text-gray-400 col-span-full">No testimonials yet</p>';
+                testimonials.forEach((test, index) => {
+                    const card = document.createElement('div');
+                    card.className = 'testimonial-card';
+                    const stars = '⭐'.repeat(test.rating);
+                    card.innerHTML = `
+                        <div class="star-rating mb-3 text-2xl">${stars}</div>
+                        <p class="text-gray-300 mb-4 italic">"${test.text}"</p>
+                        <h4 class="text-white font-bold">${test.name}</h4>
+                        ${test.company ? `<p class="text-gray-500 text-sm">${test.company}</p>` : ''}
+                    `;
+                    showcase.appendChild(card);
+                });
+
+                adminList.innerHTML = '';
+                testimonials.forEach((test, index) => {
+                    const li = document.createElement('li');
+                    li.className = 'flex justify-between items-center bg-gray-700 p-3 rounded';
+                    li.innerHTML = `
+                        <span class="text-white">${test.name} - ${'⭐'.repeat(test.rating)}</span>
+                        <button class="text-red-500 hover:text-red-700" onclick="deleteTestimonial(${index})">Delete</button>
+                    `;
+                    adminList.appendChild(li);
+                });
+            };
+
+            window.deleteTestimonial = (index) => {
+                testimonials.splice(index, 1);
+                localStorage.setItem('umar_testimonials', JSON.stringify(testimonials));
+                renderTestimonials();
+            };
+
+            document.getElementById('add-testimonial-form')?.addEventListener('submit', (e) => {
+                e.preventDefault();
+                testimonials.push({
+                    name: document.getElementById('testimonial-name-input').value,
+                    company: document.getElementById('testimonial-company-input').value,
+                    rating: parseInt(document.getElementById('testimonial-rating-input').value),
+                    text: document.getElementById('testimonial-text-input').value
+                });
+                localStorage.setItem('umar_testimonials', JSON.stringify(testimonials));
+                e.target.reset();
+                renderTestimonials();
+            });
+
+            document.getElementById('toggle-testimonial-admin-btn')?.addEventListener('click', () => {
+                document.getElementById('testimonial-admin-panel').classList.toggle('hidden');
+            });
+
+            // Blog Management
+            const renderBlog = () => {
+                const showcase = document.getElementById('blog-showcase');
+                const adminList = document.getElementById('blog-admin-list');
+                
+                showcase.innerHTML = blogPosts.length ? '' : '<p class="text-gray-400 col-span-full">No blog posts yet</p>';
+                blogPosts.slice(0, 3).forEach((post, index) => {
+                    const card = document.createElement('div');
+                    card.className = 'bg-gray-800 rounded-xl overflow-hidden shadow-lg hover:transform hover:scale-105 transition-all';
+                    card.innerHTML = `
+                        ${post.image ? `<img src="${post.image}" alt="${post.title}" class="w-full h-48 object-cover">` : '<div class="w-full h-48 bg-gray-700"></div>'}
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-white mb-3">${post.title}</h3>
+                            <p class="text-gray-400 mb-4">${post.excerpt}</p>
+                            <button class="text-blue-400 hover:text-blue-300" onclick="showBlogPost(${index})">Read More →</button>
+                        </div>
+                    `;
+                    showcase.appendChild(card);
+                });
+
+                adminList.innerHTML = '';
+                blogPosts.forEach((post, index) => {
+                    const li = document.createElement('li');
+                    li.className = 'flex justify-between items-center bg-gray-700 p-3 rounded';
+                    li.innerHTML = `
+                        <span class="text-white">${post.title}</span>
+                        <button class="text-red-500 hover:text-red-700" onclick="deleteBlogPost(${index})">Delete</button>
+                    `;
+                    adminList.appendChild(li);
+                });
+            };
+
+            window.deleteBlogPost = (index) => {
+                blogPosts.splice(index, 1);
+                localStorage.setItem('umar_blog', JSON.stringify(blogPosts));
+                renderBlog();
+            };
+
+            window.showBlogPost = (index) => {
+                const post = blogPosts[index];
+                alert(`${post.title}\n\n${post.content}`);
+            };
+
+            document.getElementById('add-blog-form')?.addEventListener('submit', (e) => {
+                e.preventDefault();
+                blogPosts.unshift({
+                    title: document.getElementById('blog-title-input').value,
+                    image: document.getElementById('blog-image-input').value,
+                    excerpt: document.getElementById('blog-excerpt-input').value,
+                    content: document.getElementById('blog-content-input').value,
+                    date: new Date().toLocaleDateString()
+                });
+                localStorage.setItem('umar_blog', JSON.stringify(blogPosts));
+                e.target.reset();
+                renderBlog();
+            });
+
+            document.getElementById('toggle-blog-admin-btn')?.addEventListener('click', () => {
+                document.getElementById('blog-admin-panel').classList.toggle('hidden');
+            });
+
+            // Booking Form
+            document.getElementById('booking-form')?.addEventListener('submit', (e) => {
+                e.preventDefault();
+                const formData = {
+                    name: document.getElementById('booking-name').value,
+                    phone: document.getElementById('booking-phone').value,
+                    email: document.getElementById('booking-email').value,
+                    service: document.getElementById('booking-service').value,
+                    date: document.getElementById('booking-date').value,
+                    time: document.getElementById('booking-time').value,
+                    message: document.getElementById('booking-message').value
+                };
+                
+                const message = `New Booking Request:\nName: ${formData.name}\nPhone: ${formData.phone}\nEmail: ${formData.email}\nService: ${formData.service}\nDate: ${formData.date}\nTime: ${formData.time}\nMessage: ${formData.message}`;
+                
+                window.open(`https://wa.me/971569353129?text=${encodeURIComponent(message)}`, '_blank');
+                e.target.reset();
+                alert('Booking request sent! We will confirm within 2 hours.');
+            });
+
+            // Contact Form
+            document.getElementById('contact-form')?.addEventListener('submit', (e) => {
+                e.preventDefault();
+                const name = document.getElementById('contact-name').value;
+                const email = document.getElementById('contact-email').value;
+                const message = document.getElementById('contact-message').value;
+                
+                const subject = encodeURIComponent(`Contact from ${name}`);
+                const body = encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`);
+                window.location.href = `mailto:omarfarooqpp@gmail.com?subject=${subject}&body=${body}`;
+            });
+
+            // Initialize default data if empty
+            if (projects.length === 0) {
+                projects = [
+                    {
+                        title: "Industrial Plant Automation",
+                        category: "industrial",
+                        location: "Dubai",
+                        mediaUrl: "https://placehold.co/800x600/1f2937/ffffff?text=Industrial+Automation",
+                        description: "Complete automation system installation for manufacturing facility",
+                        client: "ABC Manufacturing",
+                        date: "2024-10-15"
+                    },
+                    {
+                        title: "Commercial Building Electrical",
+                        category: "commercial",
+                        location: "Sharjah",
+                        mediaUrl: "https://placehold.co/800x600/1f2937/ffffff?text=Commercial+Building",
+                        description: "Full electrical installation for 20-story office building",
+                        client: "XYZ Developers",
+                        date: "2024-09-20"
+                    },
+                    {
+                        title: "High Voltage Substation",
+                        category: "industrial",
+                        location: "Abu Dhabi",
+                        mediaUrl: "https://placehold.co/800x600/1f2937/ffffff?text=Substation",
+                        description: "132kV substation maintenance and upgrade",
+                        client: "Energy Corp",
+                        date: "2024-08-10"
+                    }
+                ];
+                localStorage.setItem('umar_projects', JSON.stringify(projects));
+            }
+
+            if (testimonials.length === 0) {
+                testimonials = [
+                    {
+                        name: "Ahmed Al-Mansoori",
+                        company: "ABC Manufacturing",
+                        rating: 5,
+                        text: "Outstanding service! UMAR Electrical completed our factory automation project ahead of schedule and within budget. Highly professional team."
+                    },
+                    {
+                        name: "Sarah Johnson",
+                        company: "XYZ Developers",
+                        rating: 5,
+                        text: "Best electrical contractor we've worked with in UAE. Their attention to safety and quality is exceptional. Highly recommend!"
+                    },
+                    {
+                        name: "Mohammed Hassan",
+                        company: "Tech Industries",
+                        rating: 5,
+                        text: "Quick response time for our emergency electrical issue. Fixed the problem within hours and provided excellent follow-up service."
+                    }
+                ];
+                localStorage.setItem('umar_testimonials', JSON.stringify(testimonials));
+            }
+
+            if (blogPosts.length === 0) {
+                blogPosts = [
+                    {
+                        title: "5 Signs Your Industrial Electrical System Needs Maintenance",
+                        image: "https://placehold.co/800x600/1f2937/ffffff?text=Electrical+Maintenance",
+                        excerpt: "Learn the warning signs that indicate your electrical system requires immediate attention to prevent costly downtime.",
+                        content: "Regular maintenance of industrial electrical systems is crucial for safety and efficiency. Here are 5 key warning signs: 1) Frequent circuit breaker trips, 2) Flickering lights or power fluctuations, 3) Burning smells from electrical panels, 4) Outdated equipment beyond warranty, 5) Increased energy bills without explanation. If you notice any of these signs, contact our team immediately for a comprehensive inspection.",
+                        date: "2024-11-15"
+                    },
+                    {
+                        title: "Energy Efficiency Tips for Industrial Facilities",
+                        image: "https://placehold.co/800x600/1f2937/ffffff?text=Energy+Efficiency",
+                        excerpt: "Discover practical ways to reduce energy consumption and lower operational costs in your facility.",
+                        content: "Industrial facilities can significantly reduce energy costs through strategic upgrades: Install LED lighting systems, implement power factor correction, upgrade to energy-efficient motors, schedule preventive maintenance, conduct regular energy audits, and install automated controls. These improvements typically pay for themselves within 2-3 years through reduced energy bills.",
+                        date: "2024-11-10"
+                    },
+                    {
+                        title: "Understanding UAE Electrical Safety Standards",
+                        image: "https://placehold.co/800x600/1f2937/ffffff?text=Safety+Standards",
+                        excerpt: "A comprehensive guide to electrical safety regulations and compliance requirements in the UAE.",
+                        content: "UAE has strict electrical safety standards that all facilities must comply with. Key regulations include proper grounding systems, regular safety inspections, certified electricians for all installations, emergency shutdown systems, and documented maintenance records. Non-compliance can result in hefty fines and safety hazards. Our certified team ensures all work meets or exceeds UAE safety standards.",
+                        date: "2024-11-01"
+                    }
+                ];
+                localStorage.setItem('umar_blog', JSON.stringify(blogPosts));
+            }
+
+            // Initial render
+            renderProjects();
+            renderTestimonials();
+            renderBlog();
+            applyTranslations();
+            applyHeroImage();
+            applyAboutVideo();
+            
+            // Load saved URLs into inputs
+            document.getElementById('hero-image-input').value = heroImage;
+            document.getElementById('about-video-input').value = aboutVideo;
+        });
+
+        // Hero Image Functions
+        function saveHeroImage() {
+            const imageUrl = document.getElementById('hero-image-input').value;
+            if (!imageUrl) {
+                alert('Please enter an image URL');
+                return;
+            }
+            localStorage.setItem('umar_hero_image', imageUrl);
+            const heroSection = document.getElementById('home');
+            heroSection.style.backgroundImage = `linear-gradient(rgba(255,255,255,0.9), rgba(243,244,246,0.9)), url(${imageUrl})`;
+            heroSection.style.backgroundSize = 'cover';
+            heroSection.style.backgroundPosition = 'center';
+            document.getElementById('hero-preview').innerHTML = `
+                <p class="text-green-400">✓ Hero image saved successfully!</p>
+                <img src="${imageUrl}" class="mt-4 rounded-lg max-h-48" alt="Hero preview">
+            `;
+            setTimeout(() => {
+                document.getElementById('hero-preview').innerHTML = '';
+            }, 3000);
+        }
+
+        function removeHeroImage() {
+            localStorage.removeItem('umar_hero_image');
+            document.getElementById('hero-image-input').value = '';
+            const heroSection = document.getElementById('home');
+            heroSection.style.backgroundImage = '';
+            heroSection.style.background = 'linear-gradient(135deg, #ffffff 0%, #f3f4f6 100%)';
+            alert('Hero image removed successfully!');
+        }
+
+        // About Video Functions
+        function saveAboutVideo() {
+            const videoUrl = document.getElementById('about-video-input').value;
+            if (!videoUrl) {
+                alert('Please enter a video URL');
+                return;
+            }
+            localStorage.setItem('umar_about_video', videoUrl);
+            const videoContainer = document.getElementById('about-video-container');
+            videoContainer.innerHTML = `
+                <video controls class="w-full rounded-xl shadow-2xl" style="max-height: 500px;">
+                    <source src="${videoUrl}" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            `;
+            document.getElementById('video-preview').innerHTML = `
+                <p class="text-green-400">✓ Video saved successfully!</p>
+            `;
+            setTimeout(() => {
+                document.getElementById('video-preview').innerHTML = '';
+            }, 3000);
+        }
+
+        function removeAboutVideo() {
+            localStorage.removeItem('umar_about_video');
+            document.getElementById('about-video-input').value = '';
+            const videoContainer = document.getElementById('about-video-container');
+            videoContainer.innerHTML = `
+                <div class="bg-gray-800 rounded-xl p-8 text-center">
+                    <svg class="w-24 h-24 mx-auto mb-4 text-gray-600" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M2 6a2 2 0 012-2h6a2 2 0 012 2v8a2 2 0 01-2 2H4a2 2 0 01-2-2V6zM14.553 7.106A1 1 0 0014 8v4a1 1 0 00.553.894l2 1A1 1 0 0018 13V7a1 1 0 00-1.447-.894l-2 1z"/>
+                    </svg>
+                    <p class="text-gray-400">Video about UMAR Electrical will appear here</p>
+                    <button onclick="document.getElementById('settings-panel').classList.remove('hidden'); document.getElementById('settings-panel').scrollIntoView({behavior: 'smooth'});" class="btn-secondary mt-4">Upload Video</button>
+                </div>
+            `;
+            alert('Video removed successfully!');
+        }
+    </script>
+</body>
+</html>
